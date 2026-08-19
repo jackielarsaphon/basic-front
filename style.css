@@ -1,0 +1,193 @@
+/* ---------- ค่าพื้นฐาน ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans Thai", "Segoe UI", sans-serif;
+  background-color: #ffffff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+/* ---------- โครงหน้า ---------- */
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-bottom: 32px;
+}
+
+/* ---------- การ์ด ---------- */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 28px 28px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ---------- ฟอร์มเพิ่มงาน ---------- */
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.task-input {
+  flex: 1;
+  font-family: inherit;
+  font-size: 16px;
+  color: #111827;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.task-input::placeholder {
+  color: #9ca3af;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #111827;
+  background-color: #ffffff;
+}
+
+.add-button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #111827;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.add-button:hover {
+  background-color: #374151;
+}
+
+.add-button:active {
+  background-color: #000000;
+}
+
+.error-message {
+  min-height: 22px;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+/* ---------- รายการงาน ---------- */
+.task-list {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 4px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.task-item:first-child {
+  border-top: none;
+}
+
+.task-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 17px;
+  word-break: break-word;
+}
+
+.delete-button {
+  font-family: inherit;
+  font-size: 16px;
+  color: #4b5563;
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.delete-button:hover {
+  color: #dc2626;
+  background-color: #fef2f2;
+}
+
+/* ---------- สถานะว่าง + ส่วนท้าย ---------- */
+.empty-state {
+  display: none;
+  padding: 24px 4px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.empty-state.is-visible {
+  display: block;
+}
+
+.card-footer {
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #f3f4f6;
+  font-size: 14px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* ---------- จอเล็ก ---------- */
+@media (max-width: 480px) {
+  .page {
+    padding: 32px 14px 60px;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 20px 18px 14px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .add-form {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+}
